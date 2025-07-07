@@ -5,37 +5,121 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>RH Pré-Moldados</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; }
-    header { background-color: #003366; color: #fff; padding: 20px; text-align: center; }
-    section { padding: 20px; max-width: 800px; margin: auto; background: white; margin-top: 20px; border-radius: 8px; }
-    h1 { margin-top: 0; }
-    .btn { display: inline-block; margin-top: 20px; padding: 10px 20px; background: #007BFF; color: #fff; text-decoration: none; border-radius: 5px; }
-    footer { background: #003366; color: white; text-align: center; padding: 10px; margin-top: 20px; }
+    body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background: #f7fafd; }
+    header {
+      background: #0a3765;
+      padding: 28px 0 18px 0;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    header img { max-width: 170px; margin-bottom: 10px; }
+    header h1 { color: #fff; margin: 10px 0 5px 0; font-size: 2.2rem; font-weight: 700; letter-spacing: 1px;}
+    header p { color: #d7e4f2; margin: 0; font-size: 1.05rem; letter-spacing: .5px; }
+    .container {
+      max-width: 950px;
+      margin: 36px auto 0 auto;
+      padding: 28px 24px 40px 24px;
+      background: #fff;
+      border-radius: 22px;
+      box-shadow: 0 2px 18px 0 rgba(15,40,55,0.07);
+    }
+    h2 { margin-top: 0; font-size: 1.6rem;}
+    .produtos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 28px;
+      margin-bottom: 30px;
+      margin-top: 18px;
+    }
+    .card-produto {
+      background: #f5f8fc;
+      border-radius: 18px;
+      padding: 20px 18px;
+      box-shadow: 0 1px 10px 0 rgba(10,55,100,0.05);
+      text-align: center;
+      transition: box-shadow 0.2s;
+    }
+    .card-produto:hover { box-shadow: 0 4px 20px 0 rgba(10,55,100,0.12);}
+    .card-produto h3 { margin-top: 0; color: #0a3765; }
+    .card-produto p { margin-bottom: 7px; }
+    .infos-contato {
+      margin-top: 30px;
+      margin-bottom: 18px;
+      font-size: 1.12rem;
+    }
+    .infos-contato span { display: block; margin-bottom: 6px;}
+    .btn-whats {
+      display: inline-block;
+      background: #25d366;
+      color: #fff;
+      padding: 14px 36px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.18rem;
+      font-weight: bold;
+      text-decoration: none;
+      margin-top: 16px;
+      box-shadow: 0 2px 10px #25d36644;
+      transition: background .17s;
+    }
+    .btn-whats:hover { background: #23c65a; }
+    footer {
+      background: #0a3765;
+      color: #fff;
+      text-align: center;
+      padding: 12px 8px;
+      font-size: 1rem;
+      margin-top: 48px;
+      letter-spacing: .5px;
+    }
+    @media (max-width: 600px) {
+      .container { padding: 8px 2vw 18px 2vw; border-radius: 12px;}
+      .produtos { gap: 13px;}
+      .card-produto { padding: 13px 8px;}
+      .btn-whats { padding: 12px 18px; font-size: 1rem;}
+    }
   </style>
 </head>
 <body>
   <header>
+    <img src="logo.png" alt="RH Pré-Moldados">
     <h1>RH Pré-Moldados</h1>
-    <p>Lajes, Bloquetes, Lixeiras e mais em Porto Velho - RO</p>
+    <p>Lajes, Bloquetes, Lixeiras e Cobogós em Porto Velho - RO</p>
   </header>
 
-  <section>
-    <h2>Bem-vindo ao nosso site</h2>
-    <p>Somos especialistas em pré-moldados de qualidade: lajes treliçadas, bloquetes de concreto, lixeiras urbanas e muito mais.</p>
+  <div class="container">
+    <h2>Bem-vindo à tradição em pré-moldados!</h2>
+    <p>Mais de 20 anos entregando qualidade em lajes, bloquetes, lixeiras urbanas e cobogós. Solidez para sua obra, beleza para sua cidade.</p>
 
-    <h3>Produtos em destaque</h3>
-    <ul>
-      <li>✅ Lixeiras de Concreto – 70L e 100L</li>
-      <li>✅ Cobogós – Diversos modelos</li>
-      <li>✅ Lajes treliçadas – H8, com isopor ou lajota</li>
-    </ul>
+    <div class="produtos">
+      <div class="card-produto">
+        <h3>Lixeiras de Concreto</h3>
+        <p>Capacidade: 70L e 100L</p>
+        <p>Resistentes, seguras e com opção de personalização. Perfeitas para áreas urbanas, calçadas, praças e condomínios.</p>
+      </div>
+      <div class="card-produto">
+        <h3>Cobogós de Concreto</h3>
+        <p>Diversos modelos decorativos</p>
+        <p>Design clássico ou moderno, com alta resistência e ótimo acabamento para muros, fachadas e jardins.</p>
+      </div>
+      <div class="card-produto">
+        <h3>Lajes Treliçadas</h3>
+        <p>Modelos H8 | Isopor (EPS) ou lajota</p>
+        <p>Qualidade superior para sua construção, entregues sob medida para sua obra.</p>
+      </div>
+      <div class="card-produto">
+        <h3>Bloquetes e Pisos</h3>
+        <p>Durabilidade e acabamento de alto padrão.</p>
+        <p>Solução tradicional para calçamento de ruas, estacionamentos e áreas externas.</p>
+      </div>
+    </div>
 
-    <h3>Fale conosco</h3>
-    <p>📞 (69) 9 9955-2331</p>
-    <p>📍 Av. Calama, 5205 – São João Bosco – Porto Velho - RO</p>
-
-    <a class="btn" href="https://wa.me/556999552331" target="_blank">Chamar no WhatsApp</a>
-  </section>
+    <div class="infos-contato">
+      <span>📞 <b>(69) 9 9955-2331</b></span>
+      <span>📍 Av. Calama, 5205 – São João Bosco – Porto Velho - RO</span>
+    </div>
+    <a class="btn-whats" href="https://wa.me/556999552331" target="_blank">Chamar no WhatsApp</a>
+  </div>
 
   <footer>
     &copy; 2025 RH Pré-Moldados. Todos os direitos reservados.
