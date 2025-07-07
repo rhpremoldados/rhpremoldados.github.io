@@ -15,12 +15,13 @@
     header {
       background: #0a3765;
       text-align: center;
-      padding: 30px 0 18px 0;
+      padding: 30px 0 16px 0;
       box-shadow: 0 2px 18px 0 rgba(15,40,55,0.08);
     }
     .logo {
-      max-width: 145px;
-      margin-bottom: 12px;
+      max-width: 130px;
+      margin-bottom: 8px;
+      border-radius: 16px;
     }
     .headline {
       color: #fff;
@@ -32,104 +33,89 @@
     .subheadline {
       color: #d7e4f2;
       font-size: 1.13rem;
-      margin: 0 0 8px 0;
+      margin: 0 0 10px 0;
       letter-spacing: .5px;
     }
     .produtos {
-      max-width: 1080px;
-      margin: 40px auto;
+      max-width: 1140px;
+      margin: 44px auto 20px auto;
       padding: 0 10px;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 32px;
     }
     .card {
       background: #fff;
-      border-radius: 20px;
+      border-radius: 18px;
       box-shadow: 0 3px 15px 0 rgba(10,55,100,0.10);
       text-align: center;
-      padding: 26px 18px 22px 18px;
-      transition: transform 0.22s, box-shadow 0.18s;
+      padding: 28px 18px 24px 18px;
+      transition: transform 0.19s, box-shadow 0.18s;
       cursor: pointer;
       position: relative;
       overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 420px;
+      justify-content: flex-start;
     }
     .card:hover {
-      transform: translateY(-6px) scale(1.04);
-      box-shadow: 0 12px 32px 0 rgba(10,55,100,0.17);
+      transform: translateY(-6px) scale(1.035);
+      box-shadow: 0 12px 32px 0 rgba(10,55,100,0.18);
       z-index: 2;
     }
-    .card img {
-      width: 70px;
-      height: 70px;
-      object-fit: contain;
-      margin-bottom: 14px;
-      transition: transform 0.18s;
+    .produto-img {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      margin-bottom: 19px;
+      border-radius: 15px;
+      box-shadow: 0 2px 18px 0 #0a376526;
+      background: #f3f6fa;
     }
-    .card:hover img { transform: scale(1.14) rotate(-4deg);}
     .card h3 {
-      margin: 6px 0 11px 0;
-      font-size: 1.18rem;
+      margin: 6px 0 15px 0;
+      font-size: 1.23rem;
       color: #0a3765;
       font-weight: 700;
       letter-spacing: .2px;
     }
     .card p {
-      font-size: 1.01rem;
-      color: #444;
-      margin: 0 0 12px 0;
-      min-height: 50px;
+      font-size: 1.04rem;
+      color: #333;
+      margin: 0 0 18px 0;
+      min-height: 58px;
     }
-    .btn-produto {
-      background: #0a3765;
-      color: #fff;
-      border: none;
-      padding: 10px 30px;
-      border-radius: 7px;
-      font-size: 1.05rem;
-      font-weight: 500;
-      cursor: pointer;
-      margin-top: 6px;
-      box-shadow: 0 2px 8px #0a376544;
-      transition: background 0.19s;
-      text-decoration: none;
-      display: inline-block;
-    }
-    .btn-produto:hover { background: #175197;}
-    .contato {
-      margin: 38px auto 0 auto;
-      max-width: 500px;
-      background: #fff;
-      border-radius: 18px;
-      box-shadow: 0 3px 14px 0 rgba(15,40,55,0.08);
-      padding: 24px 18px 20px 18px;
-      text-align: center;
-    }
-    .contato h2 {
-      margin-top: 0;
-      color: #0a3765;
-      font-size: 1.25rem;
-    }
-    .contato span {
-      display: block;
-      font-size: 1.10rem;
-      margin: 9px 0;
-      color: #212b36;
-    }
-    .btn-whats {
+    .btn-principal {
       display: inline-block;
       background: #25d366;
       color: #fff;
-      font-size: 1.12rem;
-      padding: 12px 28px;
-      border-radius: 7px;
-      margin-top: 14px;
+      border: none;
+      padding: 15px 30px 15px 24px;
+      border-radius: 8px;
+      font-size: 1.08rem;
+      font-weight: 700;
+      cursor: pointer;
+      margin-top: auto;
+      box-shadow: 0 2px 8px #25d36644;
+      transition: background 0.18s, transform 0.13s;
       text-decoration: none;
-      font-weight: bold;
-      box-shadow: 0 2px 10px #25d36633;
-      transition: background .16s;
+      position: relative;
     }
-    .btn-whats:hover { background: #1eba57; }
+    .btn-principal img {
+      width: 26px;
+      vertical-align: middle;
+      margin-right: 6px;
+      margin-bottom: 4px;
+      position: absolute;
+      left: 12px;
+      top: 14px;
+    }
+    .btn-principal:hover {
+      background: #1eba57;
+      transform: scale(1.06);
+    }
     footer {
       background: #0a3765;
       color: #fff;
@@ -139,10 +125,11 @@
       margin-top: 42px;
       letter-spacing: .5px;
     }
-    @media (max-width: 650px) {
-      .produtos { grid-template-columns: 1fr; gap: 20px;}
-      .card { padding: 16px 8px;}
-      .contato { padding: 15px 6px;}
+    @media (max-width: 700px) {
+      .produtos { grid-template-columns: 1fr; gap: 22px;}
+      .card { padding: 16px 6px;}
+      .produto-img { width: 110px; height: 110px;}
+      .headline { font-size: 1.4rem;}
     }
   </style>
 </head>
@@ -154,55 +141,55 @@
   </header>
 
   <div class="produtos">
-    <div class="card" onclick="destacar(this)">
-      <img src="lixeira.png" alt="Lixeiras">
-      <h3>Lixeiras de Concreto</h3>
-      <p>Resistência e design para áreas urbanas. Capacidade de 70L ou 100L. Instalação sob medida.</p>
-      <a href="#contato" class="btn-produto">Solicitar Orçamento</a>
+    <!-- CARD 1 -->
+    <div class="card">
+      <img src="lixeira.png" alt="Lixeira de Concreto" class="produto-img">
+      <h3>Lixeira de Concreto</h3>
+      <p>Durabilidade, design e personalização para áreas urbanas. Entrega rápida e instalação sob medida.</p>
+      <a class="btn-principal" href="https://wa.me/556999552331?text=Olá!%20Quero%20um%20orçamento%20de%20Lixeira%20de%20Concreto." target="_blank">
+        <img src="whatsapp.png" alt="WhatsApp"> Falar no WhatsApp
+      </a>
     </div>
-    <div class="card" onclick="destacar(this)">
-      <img src="cobogo.png" alt="Cobogós">
+    <!-- CARD 2 -->
+    <div class="card">
+      <img src="cobogo.png" alt="Cobogós" class="produto-img">
       <h3>Cobogós</h3>
-      <p>Modelos clássicos e modernos. Ventilação, privacidade e decoração para muros e fachadas.</p>
-      <a href="#contato" class="btn-produto">Ver opções</a>
+      <p>Modelos clássicos e modernos para fachadas, muros e ambientes internos. Estilo, ventilação e privacidade.</p>
+      <a class="btn-principal" href="https://wa.me/556999552331?text=Quero%20ver%20opções%20de%20cobogó!" target="_blank">
+        <img src="whatsapp.png" alt="WhatsApp"> Ver opções no WhatsApp
+      </a>
     </div>
-    <div class="card" onclick="destacar(this)">
-      <img src="laje.png" alt="Lajes">
-      <h3>Lajes Treliçadas</h3>
-      <p>H8, isopor ou lajota. Entrega técnica e precisão para sua obra residencial ou comercial.</p>
-      <a href="#contato" class="btn-produto">Peça uma cotação</a>
+    <!-- CARD 3 -->
+    <div class="card">
+      <img src="laje.png" alt="Laje Treliçada" class="produto-img">
+      <h3>Laje Treliçada</h3>
+      <p>Lajes H8, com isopor ou lajota. Economia, agilidade e segurança para sua obra.</p>
+      <a class="btn-principal" href="https://wa.me/556999552331?text=Quero%20um%20orçamento%20de%20laje%20treliçada!" target="_blank">
+        <img src="whatsapp.png" alt="WhatsApp"> Peça uma cotação
+      </a>
     </div>
-    <div class="card" onclick="destacar(this)">
-      <img src="https://cdn-icons-png.flaticon.com/512/3107/3107696.png" alt="Pisos">
-      <h3>Pisos de Concreto</h3>
-      <p>Pisos drenantes e bloquetes: durabilidade e segurança para áreas externas, ruas e estacionamentos.</p>
-      <a href="#contato" class="btn-produto">Quero instalar</a>
+    <!-- CARD 4 -->
+    <div class="card">
+      <img src="piso.png" alt="Piso de Concreto" class="produto-img">
+      <h3>Piso de Concreto</h3>
+      <p>Pisos drenantes e bloquetes para ruas, calçadas e estacionamentos. Mais segurança e durabilidade.</p>
+      <a class="btn-principal" href="https://wa.me/556999552331?text=Quero%20instalar%20piso%20de%20concreto!" target="_blank">
+        <img src="whatsapp.png" alt="WhatsApp"> Instalar agora
+      </a>
     </div>
-    <div class="card" onclick="destacar(this)">
-      <img src="bloco.png" alt="Bloco Estrutural">
+    <!-- CARD 5 -->
+    <div class="card">
+      <img src="bloco.png" alt="Bloco Estrutural" class="produto-img">
       <h3>Bloco Estrutural</h3>
-      <p>Blocos de concreto para vedação e estrutura, padrão industrial. Economia e praticidade para sua construção.</p>
-      <a href="#contato" class="btn-produto">Ver mais</a>
+      <p>Blocos de vedação e estrutural padrão industrial. Economia, praticidade e resistência.</p>
+      <a class="btn-principal" href="https://wa.me/556999552331?text=Tenho%20interesse%20em%20bloco%20estrutural!" target="_blank">
+        <img src="whatsapp.png" alt="WhatsApp"> Falar agora
+      </a>
     </div>
-  </div>
-
-  <div class="contato" id="contato">
-    <h2>Fale direto com nossa equipe:</h2>
-    <span>📞 (69) 9 9955-2331</span>
-    <span>📍 Av. Calama, 5205 – São João Bosco – Porto Velho - RO</span>
-    <a class="btn-whats" href="https://wa.me/556999552331" target="_blank">Chamar no WhatsApp</a>
   </div>
 
   <footer>
     &copy; 2025 RH Pré-Moldados. Todos os direitos reservados.
   </footer>
-  <script>
-    // Efeito: destaca card clicado (feedback visual tradicional e moderno)
-    function destacar(card) {
-      document.querySelectorAll('.card').forEach(el => el.style.outline = 'none');
-      card.style.outline = '3px solid #25d366';
-      setTimeout(() => { card.style.outline = 'none'; }, 1800);
-    }
-  </script>
 </body>
 </html>
