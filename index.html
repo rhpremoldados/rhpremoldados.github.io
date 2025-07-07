@@ -5,124 +5,204 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>RH Pré-Moldados</title>
   <style>
-    body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background: #f7fafd; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f6fafd;
+      color: #212b36;
+    }
     header {
       background: #0a3765;
-      padding: 28px 0 18px 0;
       text-align: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      padding: 30px 0 18px 0;
+      box-shadow: 0 2px 18px 0 rgba(15,40,55,0.08);
     }
-    header img { max-width: 170px; margin-bottom: 10px; }
-    header h1 { color: #fff; margin: 10px 0 5px 0; font-size: 2.2rem; font-weight: 700; letter-spacing: 1px;}
-    header p { color: #d7e4f2; margin: 0; font-size: 1.05rem; letter-spacing: .5px; }
-    .container {
-      max-width: 950px;
-      margin: 36px auto 0 auto;
-      padding: 28px 24px 40px 24px;
-      background: #fff;
-      border-radius: 22px;
-      box-shadow: 0 2px 18px 0 rgba(15,40,55,0.07);
+    .logo {
+      max-width: 145px;
+      margin-bottom: 12px;
     }
-    h2 { margin-top: 0; font-size: 1.6rem;}
+    .headline {
+      color: #fff;
+      font-size: 2.2rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+      margin: 6px 0 5px 0;
+    }
+    .subheadline {
+      color: #d7e4f2;
+      font-size: 1.13rem;
+      margin: 0 0 8px 0;
+      letter-spacing: .5px;
+    }
     .produtos {
+      max-width: 1080px;
+      margin: 40px auto;
+      padding: 0 10px;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-      gap: 28px;
-      margin-bottom: 30px;
-      margin-top: 18px;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 30px;
     }
-    .card-produto {
-      background: #f5f8fc;
-      border-radius: 18px;
-      padding: 20px 18px;
-      box-shadow: 0 1px 10px 0 rgba(10,55,100,0.05);
+    .card {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 3px 15px 0 rgba(10,55,100,0.10);
       text-align: center;
-      transition: box-shadow 0.2s;
+      padding: 26px 18px 22px 18px;
+      transition: transform 0.22s, box-shadow 0.18s;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
     }
-    .card-produto:hover { box-shadow: 0 4px 20px 0 rgba(10,55,100,0.12);}
-    .card-produto h3 { margin-top: 0; color: #0a3765; }
-    .card-produto p { margin-bottom: 7px; }
-    .infos-contato {
-      margin-top: 30px;
-      margin-bottom: 18px;
-      font-size: 1.12rem;
+    .card:hover {
+      transform: translateY(-6px) scale(1.04);
+      box-shadow: 0 12px 32px 0 rgba(10,55,100,0.17);
+      z-index: 2;
     }
-    .infos-contato span { display: block; margin-bottom: 6px;}
+    .card img {
+      width: 70px;
+      height: 70px;
+      object-fit: contain;
+      margin-bottom: 14px;
+      transition: transform 0.18s;
+    }
+    .card:hover img { transform: scale(1.14) rotate(-4deg);}
+    .card h3 {
+      margin: 6px 0 11px 0;
+      font-size: 1.18rem;
+      color: #0a3765;
+      font-weight: 700;
+      letter-spacing: .2px;
+    }
+    .card p {
+      font-size: 1.01rem;
+      color: #444;
+      margin: 0 0 12px 0;
+      min-height: 50px;
+    }
+    .btn-produto {
+      background: #0a3765;
+      color: #fff;
+      border: none;
+      padding: 10px 30px;
+      border-radius: 7px;
+      font-size: 1.05rem;
+      font-weight: 500;
+      cursor: pointer;
+      margin-top: 6px;
+      box-shadow: 0 2px 8px #0a376544;
+      transition: background 0.19s;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .btn-produto:hover { background: #175197;}
+    .contato {
+      margin: 38px auto 0 auto;
+      max-width: 500px;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 3px 14px 0 rgba(15,40,55,0.08);
+      padding: 24px 18px 20px 18px;
+      text-align: center;
+    }
+    .contato h2 {
+      margin-top: 0;
+      color: #0a3765;
+      font-size: 1.25rem;
+    }
+    .contato span {
+      display: block;
+      font-size: 1.10rem;
+      margin: 9px 0;
+      color: #212b36;
+    }
     .btn-whats {
       display: inline-block;
       background: #25d366;
       color: #fff;
-      padding: 14px 36px;
-      border: none;
-      border-radius: 8px;
-      font-size: 1.18rem;
-      font-weight: bold;
+      font-size: 1.12rem;
+      padding: 12px 28px;
+      border-radius: 7px;
+      margin-top: 14px;
       text-decoration: none;
-      margin-top: 16px;
-      box-shadow: 0 2px 10px #25d36644;
-      transition: background .17s;
+      font-weight: bold;
+      box-shadow: 0 2px 10px #25d36633;
+      transition: background .16s;
     }
-    .btn-whats:hover { background: #23c65a; }
+    .btn-whats:hover { background: #1eba57; }
     footer {
       background: #0a3765;
       color: #fff;
       text-align: center;
-      padding: 12px 8px;
+      padding: 14px 0;
       font-size: 1rem;
-      margin-top: 48px;
+      margin-top: 42px;
       letter-spacing: .5px;
     }
-    @media (max-width: 600px) {
-      .container { padding: 8px 2vw 18px 2vw; border-radius: 12px;}
-      .produtos { gap: 13px;}
-      .card-produto { padding: 13px 8px;}
-      .btn-whats { padding: 12px 18px; font-size: 1rem;}
+    @media (max-width: 650px) {
+      .produtos { grid-template-columns: 1fr; gap: 20px;}
+      .card { padding: 16px 8px;}
+      .contato { padding: 15px 6px;}
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="RH Pré-Moldados">
-    <h1>RH Pré-Moldados</h1>
-    <p>Lajes, Bloquetes, Lixeiras e Cobogós em Porto Velho - RO</p>
+    <img class="logo" src="logo.png" alt="RH Pré-Moldados">
+    <div class="headline">RH Pré-Moldados</div>
+    <div class="subheadline">Líder em qualidade em Porto Velho - RO</div>
   </header>
 
-  <div class="container">
-    <h2>Bem-vindo à tradição em pré-moldados!</h2>
-    <p>Mais de 20 anos entregando qualidade em lajes, bloquetes, lixeiras urbanas e cobogós. Solidez para sua obra, beleza para sua cidade.</p>
-
-    <div class="produtos">
-      <div class="card-produto">
-        <h3>Lixeiras de Concreto</h3>
-        <p>Capacidade: 70L e 100L</p>
-        <p>Resistentes, seguras e com opção de personalização. Perfeitas para áreas urbanas, calçadas, praças e condomínios.</p>
-      </div>
-      <div class="card-produto">
-        <h3>Cobogós de Concreto</h3>
-        <p>Diversos modelos decorativos</p>
-        <p>Design clássico ou moderno, com alta resistência e ótimo acabamento para muros, fachadas e jardins.</p>
-      </div>
-      <div class="card-produto">
-        <h3>Lajes Treliçadas</h3>
-        <p>Modelos H8 | Isopor (EPS) ou lajota</p>
-        <p>Qualidade superior para sua construção, entregues sob medida para sua obra.</p>
-      </div>
-      <div class="card-produto">
-        <h3>Bloquetes e Pisos</h3>
-        <p>Durabilidade e acabamento de alto padrão.</p>
-        <p>Solução tradicional para calçamento de ruas, estacionamentos e áreas externas.</p>
-      </div>
+  <div class="produtos">
+    <div class="card" onclick="destacar(this)">
+      <img src="https://cdn-icons-png.flaticon.com/512/751/751463.png" alt="Lixeiras">
+      <h3>Lixeiras de Concreto</h3>
+      <p>Resistência e design para áreas urbanas. Capacidade de 70L ou 100L. Instalação sob medida.</p>
+      <a href="#contato" class="btn-produto">Solicitar Orçamento</a>
     </div>
-
-    <div class="infos-contato">
-      <span>📞 <b>(69) 9 9955-2331</b></span>
-      <span>📍 Av. Calama, 5205 – São João Bosco – Porto Velho - RO</span>
+    <div class="card" onclick="destacar(this)">
+      <img src="https://cdn-icons-png.flaticon.com/512/2889/2889676.png" alt="Cobogós">
+      <h3>Cobogós</h3>
+      <p>Modelos clássicos e modernos. Ventilação, privacidade e decoração para muros e fachadas.</p>
+      <a href="#contato" class="btn-produto">Ver opções</a>
     </div>
+    <div class="card" onclick="destacar(this)">
+      <img src="https://cdn-icons-png.flaticon.com/512/3311/3311557.png" alt="Lajes">
+      <h3>Lajes Treliçadas</h3>
+      <p>H8, isopor ou lajota. Entrega técnica e precisão para sua obra residencial ou comercial.</p>
+      <a href="#contato" class="btn-produto">Peça uma cotação</a>
+    </div>
+    <div class="card" onclick="destacar(this)">
+      <img src="https://cdn-icons-png.flaticon.com/512/3107/3107696.png" alt="Pisos">
+      <h3>Pisos de Concreto</h3>
+      <p>Pisos drenantes e bloquetes: durabilidade e segurança para áreas externas, ruas e estacionamentos.</p>
+      <a href="#contato" class="btn-produto">Quero instalar</a>
+    </div>
+    <div class="card" onclick="destacar(this)">
+      <img src="https://cdn-icons-png.flaticon.com/512/7662/7662717.png" alt="Bloco Estrutural">
+      <h3>Bloco Estrutural</h3>
+      <p>Blocos de concreto para vedação e estrutura, padrão industrial. Economia e praticidade para sua construção.</p>
+      <a href="#contato" class="btn-produto">Ver mais</a>
+    </div>
+  </div>
+
+  <div class="contato" id="contato">
+    <h2>Fale direto com nossa equipe:</h2>
+    <span>📞 (69) 9 9955-2331</span>
+    <span>📍 Av. Calama, 5205 – São João Bosco – Porto Velho - RO</span>
     <a class="btn-whats" href="https://wa.me/556999552331" target="_blank">Chamar no WhatsApp</a>
   </div>
 
   <footer>
     &copy; 2025 RH Pré-Moldados. Todos os direitos reservados.
   </footer>
+  <script>
+    // Efeito: destaca card clicado (feedback visual tradicional e moderno)
+    function destacar(card) {
+      document.querySelectorAll('.card').forEach(el => el.style.outline = 'none');
+      card.style.outline = '3px solid #25d366';
+      setTimeout(() => { card.style.outline = 'none'; }, 1800);
+    }
+  </script>
 </body>
 </html>
