@@ -37,6 +37,30 @@
       margin: 0 0 10px 0;
       letter-spacing: .5px;
     }
+
+    /* Banner */
+    .banner-site {
+      width: 100%;
+      max-width: 1140px;
+      margin: 28px auto 18px auto;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px 0 rgba(15,40,55,0.11);
+      text-align: center;
+    }
+    .banner-site img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    @media (max-width: 700px) {
+      .banner-site {
+        max-width: 100%;
+        margin: 18px auto 12px auto;
+        border-radius: 12px;
+      }
+    }
+
     .produtos {
       max-width: 1140px;
       margin: 44px auto 20px auto;
@@ -146,6 +170,11 @@
     <div class="subheadline">Líder em qualidade em Porto Velho - RO</div>
   </header>
 
+  <!-- Banner principal -->
+  <div class="banner-site">
+    <img src="banner.jpg" alt="Banner RH Pré-Moldados" />
+  </div>
+
   <div class="produtos">
     <!-- CARD 1 -->
     <div class="card">
@@ -195,11 +224,8 @@
   </div>
 
   <footer>
-    <footer>
     &copy; 2025 RH Pré-Moldados. Todos os direitos reservados.<br>
     Av. Calama, 5205 - São João Bosco, Porto Velho - RO, 76820-441
-</footer>
-
   </footer>
 </body>
 </html>
