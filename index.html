@@ -13,7 +13,7 @@
       background: #f6fafd;
       color: #212b36;
     }
-    /* Novo HEADER/banner institucional */
+    /* Header/banner institucional */
     .header-banner {
       width: 100%;
       background: #113763;
@@ -22,37 +22,39 @@
       justify-content: flex-start;
       padding: 0;
       min-height: 220px;
-      max-height: 300px;
+      max-height: 320px;
       overflow: hidden;
       position: relative;
       box-shadow: 0 2px 18px 0 rgba(15,40,55,0.08);
     }
     .header-banner-logo {
-      flex: 0 0 180px;
+      flex: 0 0 210px;
       display: flex;
-      align-items: flex-start;
-      justify-content: center;
+      align-items: center;
+      justify-content: flex-start;
       height: 100%;
       z-index: 2;
       background: transparent;
-      padding: 0 0 0 48px;
+      padding-left: 48px;
+      padding-right: 0;
     }
     .header-banner-logo img {
-      width: 110px;
-      height: 110px;
-      margin-top: 24px;
-      margin-bottom: 24px;
-      border-radius: 50%;
-      background: #fff;
+      width: 160px;      /* LOGO MAIOR */
+      height: auto;
+      margin: 0;
+      border-radius: 0;  /* SEM CÍRCULO */
+      background: transparent;
+      box-shadow: none;
+      border: none;
       object-fit: contain;
-      box-shadow: 0 2px 12px #0002;
-      border: 6px solid #113763;
+      display: block;
     }
     .header-banner-img {
       flex: 1 1 auto;
       height: 100%;
       display: flex;
       align-items: stretch;
+      background: transparent;
     }
     .header-banner-img img {
       width: 100%;
@@ -61,31 +63,28 @@
       display: block;
       border-radius: 0;
       min-height: 220px;
-      max-height: 300px;
+      max-height: 320px;
     }
     @media (max-width: 800px) {
       .header-banner {
         flex-direction: column;
-        min-height: 130px;
-        max-height: 180px;
+        min-height: 120px;
+        max-height: 160px;
       }
       .header-banner-logo {
-        flex: 0 0 100px;
-        padding: 0;
+        flex: 0 0 80px;
+        padding-left: 0;
         justify-content: center;
       }
       .header-banner-logo img {
-        width: 68px;
-        height: 68px;
-        margin-top: 12px;
-        margin-bottom: 8px;
+        width: 90px;
       }
       .header-banner-img img {
-        min-height: 80px;
-        max-height: 120px;
+        min-height: 60px;
+        max-height: 80px;
       }
     }
-    /* Resto do seu CSS continua igual */
+
     .produtos {
       max-width: 1140px;
       margin: 44px auto 20px auto;
@@ -110,22 +109,140 @@
       min-height: 420px;
       justify-content: flex-start;
     }
-    /* ... mantenha o restante igual ao seu site */
+    .card:hover {
+      transform: translateY(-6px) scale(1.035);
+      box-shadow: 0 12px 32px 0 rgba(10,55,100,0.18);
+      z-index: 2;
+    }
+    .produto-img {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      margin-bottom: 19px;
+      border-radius: 15px;
+      box-shadow: 0 2px 18px 0 #0a376526;
+      background: #f3f6fa;
+    }
+    .card h3 {
+      margin: 6px 0 15px 0;
+      font-size: 1.23rem;
+      color: #0a3765;
+      font-weight: 700;
+      letter-spacing: .2px;
+    }
+    .card p {
+      font-size: 1.04rem;
+      color: #333;
+      margin: 0 0 18px 0;
+      min-height: 58px;
+    }
+    .btn-principal {
+      display: inline-block;
+      background: #25d366;
+      color: #fff;
+      border: none;
+      padding: 15px 30px 15px 24px;
+      border-radius: 8px;
+      font-size: 1.08rem;
+      font-weight: 700;
+      cursor: pointer;
+      margin-top: auto;
+      box-shadow: 0 2px 8px #25d36644;
+      transition: background 0.18s, transform 0.13s;
+      text-decoration: none;
+      position: relative;
+      min-width: 200px;
+    }
+    .btn-principal img {
+      width: 26px;
+      vertical-align: middle;
+      margin-right: 8px;
+      margin-bottom: 4px;
+      position: absolute;
+      left: 17px;
+      top: 13px;
+    }
+    .btn-principal span {
+      margin-left: 32px;
+      display: inline-block;
+    }
+    .btn-principal:hover {
+      background: #1eba57;
+      transform: scale(1.06);
+    }
+    footer {
+      background: #0a3765;
+      color: #fff;
+      text-align: center;
+      padding: 14px 0;
+      font-size: 1rem;
+      margin-top: 42px;
+      letter-spacing: .5px;
+    }
+    @media (max-width: 700px) {
+      .produtos { grid-template-columns: 1fr; gap: 22px;}
+      .card { padding: 16px 6px;}
+      .produto-img { width: 110px; height: 110px;}
+    }
   </style>
 </head>
 <body>
-  <!-- NOVO HEADER/BANNER -->
+  <!-- HEADER/BANNER INSTITUCIONAL -->
   <div class="header-banner">
     <div class="header-banner-logo">
       <img src="logo.png" alt="Logo RH Pré-Moldados">
     </div>
     <div class="header-banner-img">
-      <img src="2f79063c-f4df-400c-bcf3-a80e8e8816f5.png" alt="Banner Institucional">
+      <img src="aa3a4ab2-b697-41b4-a77e-4bde345bba85.png" alt="Banner Institucional">
     </div>
   </div>
 
   <div class="produtos">
-    <!-- Seus cards de produtos aqui -->
+    <!-- CARD 1 -->
+    <div class="card">
+      <img src="lixeira.png" alt="Lixeira de Concreto" class="produto-img">
+      <h3>Lixeira de Concreto</h3>
+      <p>Durabilidade, design e personalização para áreas urbanas. Entrega rápida e instalação sob medida.</p>
+      <a class="btn-principal" href="https://wa.me/556999552331?text=Olá!%20Quero%20um%20orçamento%20de%20Lixeira%20de%20Concreto." target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp"><span>Falar no WhatsApp</span>
+      </a>
+    </div>
+    <!-- CARD 2 -->
+    <div class="card">
+      <img src="cobogo.png" alt="Cobogós" class="produto-img">
+      <h3>Cobogós</h3>
+      <p>Modelos clássicos e modernos para fachadas, muros e ambientes internos. Estilo, ventilação e privacidade.</p>
+      <a class="btn-principal" href="https://wa.me/556999552331?text=Quero%20ver%20opções%20de%20cobogó!" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp"><span>Falar no WhatsApp</span>
+      </a>
+    </div>
+    <!-- CARD 3 -->
+    <div class="card">
+      <img src="laje.png" alt="Laje Treliçada" class="produto-img">
+      <h3>Laje Treliçada</h3>
+      <p>Lajes H8, com isopor ou lajota. Economia, agilidade e segurança para sua obra.</p>
+      <a class="btn-principal" href="https://wa.me/556999552331?text=Quero%20um%20orçamento%20de%20laje%20treliçada!" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp"><span>Falar no WhatsApp</span>
+      </a>
+    </div>
+    <!-- CARD 4 -->
+    <div class="card">
+      <img src="piso.png" alt="Piso de Concreto" class="produto-img">
+      <h3>Piso de Concreto</h3>
+      <p>Pisos drenantes e bloquetes para ruas, calçadas e estacionamentos. Mais segurança e durabilidade.</p>
+      <a class="btn-principal" href="https://wa.me/556999552331?text=Quero%20instalar%20piso%20de%20concreto!" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp"><span>Falar no WhatsApp</span>
+      </a>
+    </div>
+    <!-- CARD 5 -->
+    <div class="card">
+      <img src="bloco.png" alt="Bloco Estrutural" class="produto-img">
+      <h3>Bloco Estrutural</h3>
+      <p>Blocos de vedação e estrutural padrão industrial. Economia, praticidade e resistência.</p>
+      <a class="btn-principal" href="https://wa.me/556999552331?text=Tenho%20interesse%20em%20bloco%20estrutural!" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp"><span>Falar no WhatsApp</span>
+      </a>
+    </div>
   </div>
 
   <footer>
